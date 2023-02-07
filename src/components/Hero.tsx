@@ -5,7 +5,7 @@ import imageWeb3Mobile from "../assets/images/image-web-3-mobile.jpg";
 
 const Hero = () => {
   const [web3Image, setWeb3Image] = useState(imageWeb3Desktop);
-
+  console.log(web3Image);
   useEffect(() => {
     const changeImageDependingOnWindowWidth = (event: UIEvent) => {
       const window = event.target as Window;
@@ -16,20 +16,23 @@ const Hero = () => {
         setWeb3Image(imageWeb3Mobile);
       }
     };
-    addEventListener("resize", () => changeImageDependingOnWindowWidth);
+    addEventListener("resize", (event) =>
+      changeImageDependingOnWindowWidth(event)
+    );
     return () =>
       removeEventListener("resize", changeImageDependingOnWindowWidth);
   }, []);
+
   return (
-    <main className="p-4">
+    <main className="flex flex-col max-w-[1400px] mx-auto gap-12 p-4 sm:flex-row sm:gap-4">
       <section>
         <img src={web3Image} alt="" />
         <article className="flex flex-col gap-4 mt-4 sm:flex-row">
-          <h1 className="font-bold text-4xl flex-1 sm:text-6xl">
+          <h1 className="font-bold text-4xl text-very-dark-blue flex-1 sm:text-6xl">
             The Bright Future of Web 3.0?
           </h1>
           <div className="flex flex-col gap-4 flex-1 sm:justify-between">
-            <p>
+            <p className="text-dark-grayish-blue">
               We dive into the next evolution of the web that claims to put the
               power of the platforms back into the hands of the people. But is
               it really fulfilling its promise?
@@ -37,29 +40,39 @@ const Hero = () => {
 
             <a
               href="#"
-              className="px-4 py-2 bg-orange-400 text-white tracking-widest w-[max-content]"
+              className="text-sm px-6 py-3 bg-soft-red text-white tracking-[0.2em] w-[max-content]"
             >
-              Read More
+              READ MORE
             </a>
           </div>
         </article>
       </section>
-      <section>
-        <h2>New</h2>
+      <section className="p-4 bg-very-dark-blue text-gray-300 max-w-[400px] w-full">
+        <h2 className="font-bold text-4xl text-soft-orange my-4">New</h2>
 
-        <article>
-          <h3>Hydrogen VS Electric Cars</h3>
-          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        <article className="border-b-[2px] border-b-gray-300 py-4">
+          <h3 className="text-2xl font-semibold my-1 text-off-white">
+            Hydrogen VS Electric Cars
+          </h3>
+          <p className="text-grayish-blue">
+            Will hydrogen-fueled cars ever catch up to EVs?
+          </p>
         </article>
 
-        <article>
-          <h3>The Downsides of AI Artistry</h3>
-          <p>What are the adverse effects of on-demand Ai Image geration?</p>
+        <article className="border-b-[2px] border-b-gray-300 py-4">
+          <h3 className="text-2xl font-semibold my-1 text-off-white">
+            The Downsides of AI Artistry
+          </h3>
+          <p className="text-grayish-blue">
+            What are the adverse effects of on-demand Ai Image geration?
+          </p>
         </article>
 
-        <article>
-          <h3>Is VC Funding Drying up?</h3>
-          <p>
+        <article className="py-4">
+          <h3 className="text-2xl font-semibold my-1 text-off-white">
+            Is VC Funding Drying up?
+          </h3>
+          <p className="text-grayish-blue">
             Private Funding by VC firms is down 50% YOY. We take a look at what
             that means
           </p>
