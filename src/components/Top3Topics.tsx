@@ -3,40 +3,41 @@ import React from "react";
 import retroPCImg from "../assets/images/image-retro-pcs.jpg";
 import topLaptopsImg from "../assets/images/image-top-laptops.jpg";
 import gamingGrowthImg from "../assets/images/image-gaming-growth.jpg";
+import Top3Card from "./Top3Card";
 
 const top3topics = () => {
   return (
-    <section>
-      <ol>
+    <section className="p-4 mt-8">
+      <ol className="flex flex-col gap-4 ">
         <li>
-          <article>
-            <img src="" alt="" />
-            <div>
-              <span>01</span>
-              <h2>Reviving Retro PCs</h2>
-              <p>what happens when old PCs are given modern updates</p>
-            </div>
-          </article>
+          <Top3Card
+            {...{
+              img: retroPCImg,
+              title: "Reviving Retro PCs",
+              description: "what happens when old PCs are given modern updates",
+              numberList: "01",
+            }}
+          />
         </li>
         <li>
-          <article>
-            <img src="" alt="" />
-            <div>
-              <span>02</span>
-              <h2>Top 10 Laptops of 2022</h2>
-              <p>Our best picks for various needs and budgets</p>
-            </div>
-          </article>
+          <Top3Card
+            {...{
+              img: topLaptopsImg,
+              title: "Top 10 Laptops of 2022",
+              description: "Our best picks for various needs and budgets",
+              numberList: "02",
+            }}
+          />
         </li>
         <li>
-          <article>
-            <img src="" alt="" />
-            <div>
-              <span>03</span>
-              <h2>The Growth of Gaming</h2>
-              <p>How the pandemic has sparked fresh opportunities</p>
-            </div>
-          </article>
+          <Top3Card
+            {...{
+              img: gamingGrowthImg,
+              title: "The Growth of Gaming",
+              description: "How the pandemic has sparked fresh opportunities",
+              numberList: "03",
+            }}
+          />
         </li>
       </ol>
     </section>
