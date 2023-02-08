@@ -40,7 +40,7 @@ const Hero = () => {
 
             <a
               href="#"
-              className="text-sm px-6 py-3 bg-soft-red text-white tracking-[0.2em] w-[max-content]"
+              className="text-sm px-6 py-3 bg-soft-red text-white tracking-[0.2em] w-[max-content] hover:bg-very-dark-blue transition-colors"
             >
               READ MORE
             </a>
@@ -51,7 +51,7 @@ const Hero = () => {
         <h2 className="font-bold text-4xl text-soft-orange my-4">New</h2>
 
         <article className="border-b-[2px] border-b-gray-300 py-4">
-          <h3 className="text-2xl font-semibold my-1 text-off-white">
+          <h3 className="text-2xl font-semibold my-1 text-off-white hover:text-soft-orange cursor-pointer">
             Hydrogen VS Electric Cars
           </h3>
           <p className="text-grayish-blue">
@@ -60,7 +60,7 @@ const Hero = () => {
         </article>
 
         <article className="border-b-[2px] border-b-gray-300 py-4">
-          <h3 className="text-2xl font-semibold my-1 text-off-white">
+          <h3 className="text-2xl font-semibold my-1 text-off-white hover:text-soft-orange cursor-pointer">
             The Downsides of AI Artistry
           </h3>
           <p className="text-grayish-blue">
@@ -69,7 +69,7 @@ const Hero = () => {
         </article>
 
         <article className="py-4">
-          <h3 className="text-2xl font-semibold my-1 text-off-white">
+          <h3 className="text-2xl font-semibold my-1 text-off-white hover:text-soft-orange cursor-pointer">
             Is VC Funding Drying up?
           </h3>
           <p className="text-grayish-blue">

@@ -7,7 +7,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
-    <header className=" flex justify-center w-full">
+    <header className=" flex justify-center w-full ">
       <div className="max-w-[1440px] w-full flex justify-between p-4 ">
         <img src={logoImg} className="object-contain" alt="logo" />
 
@@ -40,19 +40,29 @@ const Header = () => {
               <CloseMenuIcon className="text-4xl " />
             </button>
             <li className="py-2">
-              <a href="/">Home</a>
+              <a href="/" className="hover:text-soft-red">
+                Home
+              </a>
             </li>
             <li className="py-2">
-              <a href="#">New</a>
+              <a href="#" className="hover:text-soft-red">
+                New
+              </a>
             </li>
             <li className="py-2">
-              <a href="#">Popular</a>
+              <a href="#" className="hover:text-soft-red">
+                Popular
+              </a>
             </li>
             <li className="py-2">
-              <a href="#">Trending</a>
+              <a href="#" className="hover:text-soft-red">
+                Trending
+              </a>
             </li>
             <li className="py-2">
-              <a href="#">Categories</a>
+              <a href="#" className="hover:text-soft-red">
+                Categories
+              </a>
             </li>
           </ul>
         </nav>
