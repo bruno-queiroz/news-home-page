@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      homePage: ["Inter", "sans-serif"],
+    },
     extend: {
       colors: {
         "soft-orange": "hsl(35, 77%, 62%)",
