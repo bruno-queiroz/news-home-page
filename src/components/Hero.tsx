@@ -24,14 +24,14 @@ const Hero = () => {
   }, []);
 
   return (
-    <main className="flex flex-col max-w-[1400px] mx-auto gap-12 p-4 sm:flex-row sm:gap-4">
+    <main className="flex flex-col max-w-[1400px] mx-auto gap-12 p-4 lg:flex-row lg:gap-4">
       <section>
         <img src={web3Image} alt="" />
-        <article className="flex flex-col gap-4 mt-4 sm:flex-row">
-          <h1 className="font-bold text-4xl text-very-dark-blue flex-1 sm:text-6xl">
+        <article className="flex flex-col gap-4 mt-4 lg:flex-row">
+          <h1 className="font-bold text-4xl text-very-dark-blue flex-1 lg:text-6xl">
             The Bright Future of Web 3.0?
           </h1>
-          <div className="flex flex-col gap-4 flex-1 sm:justify-between">
+          <div className="flex flex-col gap-4 flex-1 lg:justify-between">
             <p className="text-dark-grayish-blue">
               We dive into the next evolution of the web that claims to put the
               power of the platforms back into the hands of the people. But is

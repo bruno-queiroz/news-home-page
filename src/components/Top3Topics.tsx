@@ -7,8 +7,8 @@ import Top3Card from "./Top3Card";
 
 const top3topics = () => {
   return (
-    <section className="p-4 mt-8">
-      <ol className="flex flex-col gap-4 ">
+    <section className="p-4 mt-12 max-w-[1400px] mx-auto">
+      <ol className="flex flex-col gap-4 lg:flex-row">
         <li>
           <Top3Card
             {...{
